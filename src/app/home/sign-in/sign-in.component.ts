@@ -36,7 +36,7 @@ export class SignInComponent implements OnInit {
     else {
 
       setTimeout(() => {
-        this.errorMessage = `Email or Password is incorrect <br> Please try again or Sign Up`;
+        this.errorMessage = `Email or Password is incorrect <br> Please try again or Sign-Up`;
 
       }, 1000);
       setTimeout(() => {
