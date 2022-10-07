@@ -1,0 +1,44 @@
+
+.formbox{
+  width: 300px;
+  height: 420px;
+  background-color: #fdfdff !important;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+  rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+  rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset !important;
+}
+.form-top-box{
+  width: 250px;
+  height: 120px;
+  margin: auto;
+  background-color: #E91E63;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+  rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+  rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset !important;
+  position: relative;
+  bottom: 20px;
+}
+.container-fluid .signup-bg{
+  height: 90% !important;
+  width: 100%;
+  background-image: url(/assets/img/peakpx.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.smallmm{
+  font-size: 12px !important;
+  position: absolute !important;
+  position: absolute;
+  top: 38%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+
+  transform: translate(-50%, -50%)
+}
+button:focus{
+  color: #fff;
+  background-color: #BB2D3B;
+}

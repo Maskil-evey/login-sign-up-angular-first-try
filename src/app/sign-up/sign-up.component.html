@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div [ngSwitch]="role">
+  <div *ngSwitchCase="'register'">
+    <div class="page-wrapper">
+      <div class="container-fluid">
+          <div class="row mt-4 row-1 mx-5">
+              <div class="col-lg-6 d-none d-lg-flex rounded-1">
+                  <div class="signup-bg bg-danger rounded-4"></div>
+              </div>
+              <!-- end of col -->
+              <div class="col-lg-6 col-sm-9 mx-auto mt-md-5 mt-lg-0">
+                      <form class="d-block ms-lg-5 ps-lg-5 mt-4"   #userForm="ngForm">
+                          <div>
+                              <p class="mx-3 text-secondary fw-bold small">Enter your Email and Password to register</p>
+                          </div>
+                          <div class="col-lg-10">
+                              <div class="mx-3">
+                                  <label for="" class="form-label"></label>
+
+                                  <input type="text" name="name" #name="ngModel" [class.is-valid]="name.valid" [class.is-invalid]="name.invalid && name.touched" class="form-control shadow-none" [(ngModel)]="userModel.name" required placeholder="Name" aria-describedby="helpId">
+                                  <!-- <small class="text-danger" *ngIf="name.invalid && name.touched">Enter Name</small> -->
+                              </div>
+                          </div>
+                          <div class="col-lg-10">
+                              <div class="mx-3">
+                                  <label for="" class="form-label"></label>
+                                  <input type="email" name="email"  class="form-control shadow-none" #email="ngModel" [class.is-valid]="email.valid"  [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="userModel.email" required placeholder="Email" aria-describedby="helpId">
+                              </div>
+                          </div>
+                          <div class="col-lg-10">
+                              <div class="mx-3">
+                                  <label for="" class="form-label "></label>
+                                  <input type="password" name="password" #psw="ngModel" [class.is-valid]="psw.valid"  [class.is-invalid]="psw.invalid && psw.touched" class="form-control shadow-none" [(ngModel)]="userModel.password" required placeholder="Password" aria-describedby="helpId">
+                              </div>
+                          </div>
+                          <br>
+                          <div class="form-check ms-3">
+                              <input class="form-check-input   shadow-none" required #check="ngModel"  [class.is-invalid]="check.invalid && check.touched" name="agreeTerms" type="checkbox" id="flexSwitchCheckChecked" [(ngModel)]="userModel.agreeTerms" checked>
+                              <label class="form-check-label text-secondary  small" for="flexSwitchCheckChecked">I agree to the <strong class="text-black">Terms</strong> and <strong class="text-black">Conditions</strong> </label>
+                          </div>
+                          <div class="col-lg-10 mt-4">
+                              <div class="mx-3">
+                                  <button type="submit"  [disabled]="userForm.invalid"    class="form-control text-light fw-bold btn btn-danger shadow"   (click)="onSubmit()">SIGN UP</button>
+                              </div>
+                          </div>
+                          <p class=" mt-4 ms-4 ps-2  text-secondary small">Already  have an account? <a href="" class="text-danger fw-bold text-decoration-none">Sign-in!</a> </p>
+                      </form>
+              </div>
+              <!-- end of col -->
+          </div>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'success'">
+    <app-successful></app-successful>
+  </div>
+</div>
